@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface ExpenseRepository extends JpaRepository<Expense, Long> {
     List<Expense> findByUser(User user);
+    long deleteByIdAndUser(Long id, User user);
 }
